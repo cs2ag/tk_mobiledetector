@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>language labels for extension 'tk_mobiledetector'</description>
+		<type>module</type>
+		<csh_table></csh_table>
+		<fileId>EXT:tk_mobiledetector/locallang.xml</fileId>
+		<labelContext type="array">
+		</labelContext>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pi1_title">Mobile Detector - FE debug</label>
+			<label index="pi1_plus_wiz_description">Shows a few tables with device information.</label>	
+			<label index="extmng.DetectTablets">Detect tablets: Detects tablets and don't treat them as full sized browsers. This option adds device type: "tablet" to the TypoScript.</label>
+			<label index="extmng.DetectedDeviceType">Detected device type: If extension detects mobile device then returns a short string describing device type. TYPO3 builtin simple device detection method returns string "wap". This extension introduces new type "mobi". This string may be used in TypoScript.</label>
+			<label index="extmng.MobileSiteUrl">Enter mobile site URL: Its hash will be used for exchanging devices data.</label>
+		</languageKey>
+		<languageKey index="pl" type="array">
+			<label index="pi1_title">Detektor Urządzeń Mobilnych - FE debug</label>
+			<label index="pi1_plus_wiz_description">Pokazuje kilka tabel zawierających informacje o urządzeniu.</label>
+			<label index="extmng.DetectTablets">Wykrywaj tablety: Wykrywaj tablety i nie traktuj ich jak pełnowymiarowe przeglądarki. Ta opcja dodaje typ urządzenia "tablet" w TypoScript.</label>
+			<label index="extmng.DetectedDeviceType">Typ wykrytego urządzenia: Jeśli to rozszerzenie wykryje urządzenie mobilne wtedy zwraca krótki string opisujący typ urządzenia. Wbudowana w TYPO3 prosta metoda wykrywania typu urządzeń zwraca string "wap". To rozszerzenie wprowadza nowy typ "mobi". To może być użyte w TypoScripcie.</label>
+			<label index="extmng.MobileSiteUrl">Wprowadź URL strony mobilnej: Będzie on używany do wymiany danych o urządzeniach mobilnych.</label>
+		</languageKey>
+	</data>
+</T3locallang>

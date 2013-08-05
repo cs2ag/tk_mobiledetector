@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'tk_mobiledetector'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_tkmobiledetector_devices">Mobile Detector Devices</label>
+			<label index="tx_tkmobiledetector_devices.uaprof">UAProf</label>
+			<label index="tx_tkmobiledetector_devices.vendor">Vendor</label>
+			<label index="tx_tkmobiledetector_devices.model">Model</label>
+			<label index="tx_tkmobiledetector_devices.screen_width">Screen width</label>
+			<label index="tx_tkmobiledetector_devices.screen_height">Screen height</label>
+			<label index="tx_tkmobiledetector_devices.browser_name">Browser name</label>
+			<label index="tx_tkmobiledetector_devices.browser_version">Browser version</label>
+			<label index="tx_tkmobiledetector_devices.frames">Frames</label>
+			<label index="tx_tkmobiledetector_devices.html_tables">Tables</label>
+			<label index="tx_tkmobiledetector_devices.java">Java</label>
+			<label index="tx_tkmobiledetector_devices.javascript">JavaScript</label>
+			<label index="tx_tkmobiledetector_devices.html_version">HTML version</label>
+			<label index="tx_tkmobiledetector_devices.xhtml_version">XHTML version</label>
+			<label index="tx_tkmobiledetector_devices.xhtml_modules">XHTML modules</label>
+			<label index="tx_tkmobiledetector_devices.os">Operating system</label>
+			<label index="tx_tkmobiledetector_devices.os_version">OS Version</label>
+			<label index="tx_tkmobiledetector_devices.os_vendor">OS Vendor</label>
+			<label index="tx_tkmobiledetector_devices.gif">GIF</label>
+			<label index="tx_tkmobiledetector_devices.jpg">JPG</label>
+			<label index="tx_tkmobiledetector_devices.png">PNG</label>
+			<label index="tx_tkmobiledetector_devices.call_str">Phone call string</label>
+			<label index="tt_content.list_type_pi1">Mobile detector - tester</label>
+		</languageKey>
+		<languageKey index="pl" type="array">
+			<label index="tx_tkmobiledetector_devices">Mobile Detector Urządzenia</label>
+			<label index="tx_tkmobiledetector_devices.uaprof">UAProf</label>
+			<label index="tx_tkmobiledetector_devices.vendor">Producent</label>
+			<label index="tx_tkmobiledetector_devices.model">Model</label>
+			<label index="tx_tkmobiledetector_devices.screen_width">Szerokość ekranu</label>
+			<label index="tx_tkmobiledetector_devices.screen_height">Wysokość ekranu</label>
+			<label index="tx_tkmobiledetector_devices.browser_name">Nazwa przeglądarki</label>
+			<label index="tx_tkmobiledetector_devices.browser_version">Wersja przeglądarki</label>
+			<label index="tx_tkmobiledetector_devices.frames">Ramki</label>
+			<label index="tx_tkmobiledetector_devices.html_tables">Tabele</label>
+			<label index="tx_tkmobiledetector_devices.javascript">JavaScript</label>
+			<label index="tx_tkmobiledetector_devices.html_version">Wersja HTML</label>
+			<label index="tx_tkmobiledetector_devices.xhtml_version">Wersja XHTML</label>
+			<label index="tx_tkmobiledetector_devices.xhtml_modules">Moduły XHTML</label>
+			<label index="tx_tkmobiledetector_devices.os">System operacyjny</label>
+			<label index="tx_tkmobiledetector_devices.os_version">Wersja OS</label>
+			<label index="tx_tkmobiledetector_devices.os_vendor">Producent OS</label>
+			<label index="tx_tkmobiledetector_devices.call_str">String wywołania telefonu</label>
+			<label index="tt_content.list_type_pi1">Mobile detector - tester</label>
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_tkmobiledetector_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="browser_info">Browser info</label>
+			<label index="device_type">Device type</label>
+			<label index="uaprof_data">UAProf data</label>
+			<label index="accept_headers">Accept headers</label>
+			<label index="uaprof_headers">UAProf headers</label>
+			<label index="win_mobi_headers">Windows Mobile headers</label>
+			<label index="opera_mini_headers">Opera Mini headers</label>
+		</languageKey>
+		<languageKey index="pl" type="array">
+			<label index="browser_info">Informacje o przeglądarce</label>
+			<label index="device_type">Typ urządzenia</label>
+			<label index="uaprof_data">Dane UAProf</label>
+			<label index="accept_headers">Nagłówki Accept</label>
+			<label index="uaprof_headers">Nagłówki UAProf</label>
+			<label index="win_mobi_headers">Nagłówki Windows Mobile</label>
+			<label index="opera_mini_headers">Nagłówki Opery Mini</label>
+		</languageKey>
+	</data>
+</T3locallang>

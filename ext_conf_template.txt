@@ -1,0 +1,9 @@
+# cat=basic//10; type=boolean; label=LLL:EXT:tk_mobiledetector/Language/Backend/locallang.xml:extmng.DetectTablets
+DetectTablets = 0
+
+# cat=basic//20; type=options[wap,pda,mobi]; label=LLL:EXT:tk_mobiledetector/Language/Backend/locallang.xml:extmng.DetectedDeviceType
+DetectedDeviceType = mobi
+
+# cat=basic//30; type=string; label=LLL:EXT:tk_mobiledetector/Language/Backend/locallang.xml:extmng.MobileSiteUrl
+MobileSiteUrl = http://mysite.mobi
+

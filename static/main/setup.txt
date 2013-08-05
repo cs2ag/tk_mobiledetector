@@ -1,0 +1,68 @@
+#
+# Supported by device markup
+#
+###############################################################################
+[device= mobi]
+config.doctype = <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+config.xhtmlDoctype = xhtml_basic
+config.additionalHeaders = Content-Type: application/xhtml+xml
+[device= mobi] && [xhtml_version= = 1.0]
+config.doctype = xhtml_trans
+config.xhtmlDoctype = xhtml_trans
+config.additionalHeaders >
+[device= mobi] && [xhtml_version= >= 1.1]
+config.doctype = xhtml_11
+config.xhtmlDoctype = xhtml_11
+config.additionalHeaders >
+[end]
+
+
+#
+# Mobile device META headers
+#
+###############################################################################
+[device= mobi]
+page.headerData.200 = TEXT
+page.headerData.200.value = <meta name="HandheldFriendly" content="True" />
+[end]
+
+
+#
+# META VIEWPORT is supported by most mobile browsers like: Opera Mobile, iPhone, BlackBerry, 
+# Safari Mobile, Android, webOS. So it will be added by default.
+#
+[device= mobi]
+page.headerData.201 = TEXT
+page.headerData.201.insertData=1
+page.headerData.201.value = device-width
+[device= mobi] && [screen_width= < 220]
+page.headerData.201.value = 160
+[device= mobi] && [screen_width= < 300]
+page.headerData.201.value = 220
+[device= mobi] && [screen_width= < 400]
+page.headerData.201.value = 300
+[device= mobi] && [screen_width= = 400]
+page.headerData.201.value = 400
+[end]]
+
+[device= mobi]
+page.headerData.201.wrap = <meta name="viewport" content="width=|, user-scalable=yes, initial-scale=1, maximum-scale=2.0, minimum-scale=0.5" />
+[device= mobi] && [browser_name= *Explorer*]
+page.headerData.201.wrap = <meta name="mobileoptimized" content="width=|" />
+[end]
+
+
+#
+# Disable detecting phone numbers by browser
+#
+[device= mobi] && [model= *BlackBerry*]
+page.headerData.202 = TEXT
+page.headerData.202.insertData=1
+page.headerData.202.value = <meta name="x-rim-auto-match" content="none" />
+[end]
+
+[device= mobi] && [model= *iPhone*]
+page.headerData.202 = TEXT
+page.headerData.202.insertData=1
+page.headerData.202.value = <meta name="format-detection" content="telephone=no" />
+[end]

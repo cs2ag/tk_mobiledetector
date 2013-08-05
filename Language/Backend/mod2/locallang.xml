@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for module &quot;tools_txtkmobiledetectorM2&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="title">Mobile devices</label>
+			<label index="func_menu">[MENU]</label>
+			<label index="func_menu_description">Module for mobile devices management</label>
+			<label index="func_stats">Device statistics</label>
+			<label index="func_stats_description">Simple mobile device statistics.</label>
+			<label index="func_check">Check and add device</label>
+			<label index="func_check_enter_url">Enter UAProf url</label>
+			<label index="func_check_description">Enter link to device capabilities and see if device exitsts in data base. New devices will be added automatically.</label>
+			<label index="func_exch">Manually exchange devices</label>
+			<label index="func_exch_description">Manually exchange devices.</label>
+			<label index="stat0">Devices imported from last free WURFL database</label>
+			<label index="stat1">Devices collected by this site</label>
+			<label index="stat2">Devices exchanged with server</label>
+			<label index="submit">Submit</label>
+			<label index="unknown_device">Unknown device</label>
+			<label index="new_device_added">New device added to database</label>
+			<label index="known_device">Device loaded from the local database</label>
+			<label index="too_small_device">Device screen is too small to add to database</label>
+			<label index="db_save_error">Error saving error into database</label>
+			<label index="db_save_success">Data saved into database</label>
+			<label index="incorrect_url">Given url is incorrect</label>
+			<label index="not_finished">Function not finished yet</label>
+			<label index="download_device_caps_error">An error has ocurred while downloading data from this link &lt;b&gt;&lt;a href="%s" target="_blank"&gt;%s&lt;/a&gt;&lt;/b&gt;. Click it and check if it works.</label>
+			<label index="xml_syntax_error">Parsing data error</label>
+			<label index="incorrect_data_format">Incorrect data format</label>
+		</languageKey>
+		<languageKey index="pl" type="array">
+			<label index="title">Urządzenia mobilne</label>
+			<label index="func_menu_description">Moduł do zarządzania urządzeniami mobilnymi</label>
+			<label index="func_stats">Statystki urządzeń</label>
+			<label index="func_stats_description">Proste statystki urządzeń.</label>
+			<label index="func_check">Sprawdź i dodaj urządzenie</label>
+			<label index="func_check_description">Podaj link do właściwości urządzenia i zobacz czy urządzenie istnieje w bazie danych. Nowe urządzenia będą dodawane automatycznie.</label>
+			<label index="func_check_enter_url">Wprowadź url UAProf</label>
+			<label index="func_exch">Ręcznie wymień urządzenia</label>
+			<label index="func_exch_description">Wymień się urządzeniami z serwerem.</label>
+			<label index="stat0">Urządzenia zaimportowane z ostatniej darmowej bazy WURFL</label>
+			<label index="stat1">Urządzenia zebrane przez tą stronę</label>
+			<label index="stat2">Urządzenia wymienione z serwerem</label>
+			<label index="submit">Wyślij</label>
+			<label index="unknown_device">Nieznane urządzenie</label>
+			<label index="new_device_added">Nowe urządzenie dodane do bazy danych</label>
+			<label index="known_device">Dane urządzenia pobrane z lokalnej bazy danych</label>
+			<label index="too_small_device">Ekran urządzenia jest zbyt mały by dodać go do bazy danych</label>
+			<label index="db_save_error">Błąd zapisu do bazy</label>
+			<label index="db_save_success">Dane zapisano w bazie danych</label>
+			<label index="incorrect_url">Podany url jest niepoprawny</label>
+			<label index="download_device_caps_error">Wystąpił błąd podczas pobierania danych z tego linku &lt;b&gt;&lt;a href="%s" target="_blank"&gt;%s&lt;/a&gt;&lt;/b&gt;. Kliknij go i sprawdź czy działa.</label>
+			<label index="xml_syntax_error">Błąd parsowania danych</label>
+			<label index="incorrect_data_format">Niewłaściwy format danych</label>
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,21 @@
+#
+# Maximum image width
+#
+###############################################################################
+[device= mobi]
+styles.content.imgtext.maxW = 400
+styles.content.imgtext.maxWInText = 400
+styles.content.imgtext.linkWrap.width = 400
+[device= mobi] && [screen_width= < 220]
+styles.content.imgtext.maxW = 160
+styles.content.imgtext.maxWInText = 160
+styles.content.imgtext.linkWrap.width = 160
+[device= mobi] && [screen_width= < 300]
+styles.content.imgtext.maxW = 220
+styles.content.imgtext.maxWInText = 220
+styles.content.imgtext.linkWrap.width = 220
+[device= mobi] && [screen_width= < 400]
+styles.content.imgtext.maxW = 300
+styles.content.imgtext.maxWInText = 300
+styles.content.imgtext.linkWrap.width = 300
+[end]

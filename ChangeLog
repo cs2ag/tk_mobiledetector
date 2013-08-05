@@ -1,0 +1,26 @@
+2013-04-19  Tomasz Krawczyk  <tomasz@typo3.pl>
+
+	* Added TYPO3 v.6 compatibility.
+
+2013-03-24  Tomasz Krawczyk  <tomasz@typo3.pl>
+
+	* Added tablets detection.
+
+2013-02-22  Tomasz Krawczyk  <tomasz@typo3.pl>
+
+	* Fixed typo in a few files.
+	* Updated device detection method from http://detectmobilebrowsers.com/ .
+	* Added FE plugin for debuging purposes.
+	* Added example static templates.
+
+2013-01-31  Tomasz Krawczyk  <tomasz@typo3.pl>
+
+	* Bugfixes. Thanks to Rasto Birka.
+
+2011-12-16  Tomasz Krawczyk  <tomasz@typo3.pl>
+
+	* BUGFIX: getBrowserInfo hook was causing RTE not to show up.
+
+2011-11-16  Tomasz Krawczyk  <tomasz@typo3.pl>
+
+	* Initial code generated with kickstarter

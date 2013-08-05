@@ -1,0 +1,30 @@
+#
+# Maximum image dimensions
+#
+###############################################################################
+[device= mobi]
+plugin.tt_news.singleMaxW = 400
+plugin.tt_news.singleMaxH = 300
+plugin.tt_news.displayList.image.file.maxW = 200
+plugin.tt_news.displayList.image.file.maxH = 150
+[device= mobi] && [screen_width= < 220]
+plugin.tt_news.singleMaxW = 160
+plugin.tt_news.singleMaxH = 120
+plugin.tt_news.displayList.image.file.maxW = 80
+plugin.tt_news.displayList.image.file.maxH = 60
+[device= mobi] && [screen_width= >= 220]
+plugin.tt_news.singleMaxW = 220
+plugin.tt_news.singleMaxH = 150
+plugin.tt_news.displayList.image.file.maxW = 110
+plugin.tt_news.displayList.image.file.maxH = 75
+[device= mobi] && [screen_width= >= 300]
+plugin.tt_news.singleMaxW = 300
+plugin.tt_news.singleMaxH = 235
+plugin.tt_news.displayList.image.file.maxW = 150
+plugin.tt_news.displayList.image.file.maxH = 117
+[device= mobi] && [screen_width= >= 400]
+plugin.tt_news.singleMaxW = 400
+plugin.tt_news.singleMaxH = 300
+plugin.tt_news.displayList.image.file.maxW = 200
+plugin.tt_news.displayList.image.file.maxH = 150
+[end]
