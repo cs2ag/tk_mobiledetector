@@ -24,13 +24,21 @@
  *
  * This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/ 
-
+/**
+ * Class extends ConditionMatcher class with new Typoscript 
+ * conditions.
+ *
+ * @author	Tomasz Krawczyk <tomasz@typo3.pl>
+ * @package	TYPO3
+ * @subpackage	tk_mobiledetector
+ */
 class ux_ConditionMatcher extends \TYPO3\CMS\Frontend\Configuration\TypoScript\ConditionMatching\ConditionMatcher {
-	
+
 	private $extKey = 'tk_mobiledetector';
 
 	/**
-	 * Evaluates a TypoScript condition given as input, eg. "[browser=net][...(other conditions)...]"
+	 * Evaluates a TypoScript condition given as input, eg. 
+	 * "[browser=net][...(other conditions)...]"
 	 *
 	 * @param	string		$string: The condition to match against its criterias.
 	 * @return	boolean		Whether the condition matched
@@ -40,8 +48,9 @@ class ux_ConditionMatcher extends \TYPO3\CMS\Frontend\Configuration\TypoScript\C
 
 		$result = parent::evaluateCondition($string);
 		if (is_bool($result)) {
-			if($result)
+			if($result) {
 				return $result;
+			}
 		}
 
 		$browserInfo = array();
@@ -57,16 +66,18 @@ class ux_ConditionMatcher extends \TYPO3\CMS\Frontend\Configuration\TypoScript\C
 			case 'vendor':
 				$values = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $value, TRUE);
 				foreach ($values as $test) {
-					if ($this->searchStringWildcard($browserInfo['vendor'], $test))
+					if ($this->searchStringWildcard($browserInfo['vendor'], $test)) {
 						return TRUE;
+					}
 				}
 				break;
 
 			case 'model':
 				$values = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $value, TRUE);
 				foreach ($values as $test) {
-					if ($this->searchStringWildcard($browserInfo['model'], $test))
+					if ($this->searchStringWildcard($browserInfo['model'], $test)) {
 						return TRUE;
+					}
 				}
 				break;
 
@@ -93,12 +104,13 @@ class ux_ConditionMatcher extends \TYPO3\CMS\Frontend\Configuration\TypoScript\C
 				foreach ($values as $test) {
 					$browsers = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode('|', $browserInfo['browser_name'], TRUE);
 					foreach ($browsers as $browser) {
-						if ($this->searchStringWildcard($browser, $test))
+						if ($this->searchStringWildcard($browser, $test)) {
 							return TRUE;
+						}
 					}
 				}
 				break;
-				
+
 			case 'browser_version':
 				$values = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $value, TRUE);
 				foreach ($values as $test) {
@@ -116,7 +128,7 @@ class ux_ConditionMatcher extends \TYPO3\CMS\Frontend\Configuration\TypoScript\C
 					return TRUE;
 				}
 				break;
-				
+
 			case 'html_tables':
 				if (intval($browserInfo['html_tables']) == intval($value)) {
 					return TRUE;
@@ -156,8 +168,9 @@ class ux_ConditionMatcher extends \TYPO3\CMS\Frontend\Configuration\TypoScript\C
 			case 'os':
 				$values = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $value, TRUE);
 				foreach ($values as $test) {
-					if ($this->searchStringWildcard($browserInfo['os'], $test))
+					if ($this->searchStringWildcard($browserInfo['os'], $test)) {
 						return TRUE;
+					}
 				}
 				break;
 
@@ -173,8 +186,9 @@ class ux_ConditionMatcher extends \TYPO3\CMS\Frontend\Configuration\TypoScript\C
 			case 'os_vendor':
 				$values = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $value, TRUE);
 				foreach ($values as $test) {
-					if ($this->searchStringWildcard($browserInfo['os_vendor'], $test))
+					if ($this->searchStringWildcard($browserInfo['os_vendor'], $test)) {
 						return TRUE;
+					}
 				}
 				break;
 
@@ -206,7 +220,6 @@ class ux_ConditionMatcher extends \TYPO3\CMS\Frontend\Configuration\TypoScript\C
 				break;
 		}
 		return FALSE;
- 	}
-	
+	}
 }
 ?>

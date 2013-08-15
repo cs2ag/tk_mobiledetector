@@ -2,7 +2,7 @@
 /***************************************************************
  * Copyright notice
  *
- * (c) 2011 Tomasz Krawczyk <tomasz@typo3.pl>
+ * (c) 2013 Tomasz Krawczyk <tomasz@typo3.pl>
  * All rights reserved
  *
  * This script is part of the TYPO3 project. The TYPO3 project is
@@ -23,17 +23,24 @@
  * GNU General Public License for more details.
  *
  * This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/ 
-
-class ux_t3lib_matchCondition_frontend extends t3lib_matchCondition_frontend {
-	
+ ***************************************************************/
+/**
+ * Class extends t3lib_matchCondition_frontend class with new Typoscript 
+ * conditions.
+ *
+ * @author	Tomasz Krawczyk <tomasz@typo3.pl>
+ * @package	TYPO3
+ * @subpackage	tk_mobiledetector
+ */
+class ux_t3lib_matchCondition_frontend extends t3lib_matchCondition_frontend {	
 	private $extKey = 'tk_mobiledetector';
 	
-	
 	/**
-	 * Evaluates a TypoScript condition given as input, eg. "[browser=net][...(other conditions)...]"
+	 * Evaluates a TypoScript condition given as input, eg. 
+	 * "[browser=net][...(other conditions)...]"
 	 *
-	 * @param	string		$string: The condition to match against its criterias.
+	 * @param	string		$string: The condition to match against its 
+	 *                      criterias.
 	 * @return	boolean		Whether the condition matched
 	 * @see t3lib_tsparser::parse()
 	 */
@@ -41,18 +48,17 @@ class ux_t3lib_matchCondition_frontend extends t3lib_matchCondition_frontend {
 
 		$result = parent::evaluateCondition($string);
 		if (is_bool($result)) {
-			if($result)
+			if ($result == TRUE)
 				return $result;
 		}
 
 		$browserInfo = array();
-		$browserInfo = parent::getBrowserInfo(t3lib_div::getIndpEnv('HTTP_USER_AGENT'));	
-		
-		list($key, $value) = t3lib_div::trimExplode('=', $string, FALSE, 2);
-
+		$browserInfo = parent::getBrowserInfo(t3lib_div::getIndpEnv('HTTP_USER_AGENT'));
 		if (!array_key_exists('uaprof', $browserInfo)) {
 			return FALSE;
 		}
+
+		list($key, $value) = t3lib_div::trimExplode('=', $string, FALSE, 2);
 
 		switch ($key) {
 			case 'vendor':
@@ -105,7 +111,7 @@ class ux_t3lib_matchCondition_frontend extends t3lib_matchCondition_frontend {
 					}
 				}
 				break;
-				
+
 			case 'browser_version':
 				$values = t3lib_div::trimExplode(',', $value, TRUE);
 				foreach ($values as $test) {
@@ -123,7 +129,7 @@ class ux_t3lib_matchCondition_frontend extends t3lib_matchCondition_frontend {
 					return TRUE;
 				}
 				break;
-				
+
 			case 'html_tables':
 				if (intval($browserInfo['html_tables']) == intval($value)) {
 					return TRUE;
@@ -206,7 +212,7 @@ class ux_t3lib_matchCondition_frontend extends t3lib_matchCondition_frontend {
 					return TRUE;
 				}
 				break;
-				
+
 			case 'call_str':
 				$values = t3lib_div::trimExplode(',', $value, TRUE);
 				foreach ($values as $test) {
@@ -217,13 +223,11 @@ class ux_t3lib_matchCondition_frontend extends t3lib_matchCondition_frontend {
 				break;
 		}
 		return FALSE;
- 	}
-	
-	
-
+	}
 }
 
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/tk_mobiledetector/class.ux_t3lib_matchcondition_frontend.php']) {
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/tk_mobiledetector/class.ux_t3lib_matchcondition_frontend.php']);
+if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']
+	['ext/tk_mobiledetector/class.ux_t3lib_matchcondition_frontend.php']) {
+	require_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/tk_mobiledetector/class.ux_t3lib_matchcondition_frontend.php']);
 }
 ?>

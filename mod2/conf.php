@@ -1,5 +1,4 @@
 <?php
-
 	// DO NOT REMOVE OR CHANGE THESE 2 LINES:
 $MCONF['name'] = 'tools_txtkmobiledetectorM2';
 $MCONF['script'] = '_DISPATCH';

@@ -42,14 +42,13 @@ class tx_tkmobiledetector_pi1_wizicon {
 	 * @param	array		$wizardItems: The wizard items
 	 * @return	Modified array with wizard items
 	 */
-	public function proc($wizardItems)	{
-
-		$LL = $this->includeLocalLang();
+	public function proc($wizardItems) {
+		$ll = $this->includeLocalLang();
 
 		$wizardItems['plugins_tx_tkmobiledetector_pi1'] = array(
 			'icon' => t3lib_extMgm::extRelPath('tk_mobiledetector') . 'pi1/ce_wiz.gif',
-			'title' => $GLOBALS['LANG']->getLLL('pi1_title', $LL),
-			'description' => $GLOBALS['LANG']->getLLL('pi1_plus_wiz_description', $LL),
+			'title' => $GLOBALS['LANG']->getLLL('pi1_title', $ll),
+			'description' => $GLOBALS['LANG']->getLLL('pi1_plus_wiz_description', $ll),
 			'params' => '&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=tk_mobiledetector_pi1'
 		);
 
@@ -58,12 +57,12 @@ class tx_tkmobiledetector_pi1_wizicon {
 
 
 	/**
-	 * Reads the [extDir]/locallang.xml and returns the $LOCAL_LANG array found in that file.
+	 * Reads the [extDir]/locallang.xml and returns the $LOCAL_LANG array found
+	 * in that file.
 	 *
 	 * @return	The array with language labels
 	 */
-	protected function includeLocalLang()	{
-
+	protected function includeLocalLang() {
 		$llFile = t3lib_extMgm::extPath('tk_mobiledetector') . 'Language/Backend/locallang.xml';
 		$version = class_exists('t3lib_utility_VersionNumber')
 				? t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version)
@@ -81,8 +80,8 @@ class tx_tkmobiledetector_pi1_wizicon {
 	}
 }
 
-
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/tk_mobiledetector/pi1/class.tx_tkmobiledetector_pi1_wizicon.php'])	{
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/tk_mobiledetector/pi1/class.tx_tkmobiledetector_pi1_wizicon.php']);
+if (defined('TYPO3_MODE') && 
+	$TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/tk_mobiledetector/pi1/class.tx_tkmobiledetector_pi1_wizicon.php'])	{
+	require_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/tk_mobiledetector/pi1/class.tx_tkmobiledetector_pi1_wizicon.php']);
 }
 ?>

@@ -290,6 +290,6 @@ class tx_tkmobiledetector_pi1 extends tslib_pibase {
 }
  
 if (defined('TYPO3_MODE') && isset($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/tk_mobiledetector/pi1/class.tx_tkmobiledetector_pi1.php'])) {
-	include_once($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/tk_mobiledetector/pi1/class.tx_tkmobiledetector_pi1.php']);
+	require_once($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/tk_mobiledetector/pi1/class.tx_tkmobiledetector_pi1.php']);
 } 
 ?>
