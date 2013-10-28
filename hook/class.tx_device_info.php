@@ -300,9 +300,9 @@ class tx_device_info {
 		
 		$sRes = FALSE;
 
-		if (preg_match('/Android/', $strUA)) {
+		if (preg_match('/android/i', $strUA)) {
 		
-			if (preg_match('/mobile/', $strUA)) {
+			if (preg_match('/mobile/i', $strUA)) {
 				$bRes = TRUE;
 			}
 		}
@@ -322,9 +322,9 @@ class tx_device_info {
 		
 		$sRes = FALSE;
 
-		if (preg_match('/Android/', $strUA)) {
+		if (preg_match('/android/i', $strUA)) {
 		
-			if (preg_match('/mobile/', $strUA) == 0) {
+			if (preg_match('/mobile/i', $strUA) == 0) {
 				$bRes = TRUE;
 			}
 		}
@@ -370,12 +370,12 @@ class tx_device_info {
 		
 		// Should detect tablets
 		if (intval($this->extConf['DetectTablets']) != 0) {
-			
+
 			if ($this->is_AndroidTablet($userAgent)) {
 				if (TYPO3_DLOG) t3lib_div::devLog('Found Android tablet', $this->extKey);
 				return 'tablet';
 			}
-			
+
 			if ($this->is_iPad($userAgent)) {
 				if (TYPO3_DLOG) t3lib_div::devLog('Found iPad tablet', $this->extKey);
 				return 'tablet';
